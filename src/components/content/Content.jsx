@@ -26,7 +26,8 @@ export default function Content() {
 
     return (
         <>
-            <div className="content-app p-5">
+            <div className="content-app p-5 mt-[100px]">
+                <div onClick={handleRefresh} className='refresh-btn p-2 justify-end float-right bg-slate-800 hover:bg-slate-700 inline-block text-slate-200 font-bold rounded-md cursor-pointer'>Refresh</div>
                 <h1 className="title-list text-2xl font-bold mb-4">Your Task</h1>
                 <div className="list p-5 bg-slate-200 rounded-xl">
                     {error && <p className='text-red-500'>{error}</p>}
@@ -48,7 +49,6 @@ export default function Content() {
                         <p>No tasks available</p>
                     )}
                 </div>
-                <div onClick={handleRefresh} className='refresh-btn p-2 relative top-3 right-0 bg-slate-800 hover:bg-slate-700 inline-block text-slate-200 font-bold rounded-md cursor-pointer'>Refresh</div>
             </div>
         </>
     );
